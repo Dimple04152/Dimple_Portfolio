@@ -1,0 +1,107 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.about-text {
+  padding: 30px;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+.quick-facts {
+  margin-top: 2rem;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fact-item {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.fact-label {
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--lpu-orange-glow);
+  z-index: 0;
+}
+
+.edu-card {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+  margin-left: 40px;
+  border-radius: 12px;
+}
+
+.edu-card::before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--lpu-orange);
+  left: -27px;
+  top: 30px;
+  box-shadow: 0 0 10px var(--lpu-orange);
+}
+
+.edu-year {
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.edu-card h3 {
+  color: var(--text-main);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.institution {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.edu-details {
+  color: var(--text-main);
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
