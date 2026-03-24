@@ -7,11 +7,13 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import AcademicExtras from './components/AcademicExtras';
 import Contact from './components/Contact';
+import ParticleBackground from './components/ParticleBackground';
 import './index.css';
 
 function App() {
   return (
     <div className="app-container">
+      <ParticleBackground />
       <Header />
       <main>
         <Hero />

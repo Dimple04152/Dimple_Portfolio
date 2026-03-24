@@ -7,9 +7,6 @@ const Experience = () => {
       <div className="timeline-container">
         
         <div className="timeline-item right fade-in">
-          <div className="timeline-image-wrapper">
-            <img src="/stock.gif" alt="Stock Screener" className="experience-image" />
-          </div>
           <div className="timeline-content glass-panel">
             <span className="timeline-date text-gradient">Jan 2026 – Ongoing</span>
             <h3>Software Engineering Intern</h3>
@@ -24,9 +21,6 @@ const Experience = () => {
         </div>
 
         <div className="timeline-item left fade-in">
-          <div className="timeline-image-wrapper">
-            <img src="/trie.jpg" alt="Trie System" className="experience-image" />
-          </div>
           <div className="timeline-content glass-panel">
             <span className="timeline-date text-gradient">Jun 2025 – Jul 2025</span>
             <h3>Trie-Based Auto-Suggestion System Training</h3>

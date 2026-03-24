@@ -3,7 +3,7 @@
 :root {
   --bg-dark: #0a0a0c;
   --bg-lighter: #121318;
-  --bg-card: rgba(20, 22, 28, 0.6);
+  --bg-card: rgba(10, 12, 16, 0.85);
   --text-main: #f4f4f5;
   --text-muted: #a1a1aa;
   --lpu-orange: #EF7D00;
@@ -31,7 +31,12 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -53,17 +58,71 @@ button {
 /* Glassmorphism Classes */
 .glass-panel {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #fff 0%, var(--lpu-orange) 100%);
+  background: linear-gradient(270deg, #fff 0%, var(--lpu-orange) 50%, #fff 100%);
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientFlow 4s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.continuous-bounce {
+  display: inline-block;
+  animation: continuousFloat 3s ease-in-out infinite;
+}
+
+@keyframes continuousFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.highlight-pulse {
+  color: var(--lpu-orange);
+  display: inline-block;
+  animation: pulseText 3s infinite;
+}
+
+@keyframes pulseText {
+
+  0%,
+  100% {
+    opacity: 0.85;
+    text-shadow: 0 0 0px transparent;
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow: 0 0 12px var(--lpu-orange-glow);
+    color: #ff8c00;
+  }
 }
 
 .btn-primary {
@@ -136,4 +195,14 @@ button {
 
 .fade-in {
   animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards;
 }
