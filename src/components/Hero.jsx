@@ -27,7 +27,7 @@ const Hero = () => {
 
         <div className="profile-image-wrapper slide-up" style={{ animationDelay: '0.6s' }}>
           <img
-            src="public/profilePic.jpeg"
+            src="/profilePic.jpeg"
             alt="Profile"
             className="profile-image"
           />
